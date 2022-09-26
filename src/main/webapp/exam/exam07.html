@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jump</title>
+<script type="text/javascript">
+	function number() {
+		var num = parseInt(document.fm.numb.value);
+		if (num % 2 == 0) {
+			alert("偶数です。");
+		} else {
+			alert("奇数です。");
+		}
+		if (num < 0) {
+			alert("負の値です。");
+			document.fm.action = "http://www.mof.go.jp/";
+			document.fm.submit();
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="fm">
+		<dl>
+			<dt>数値</dt>
+			<dd>
+				<input type="text" name="numb" />
+			</dd>
+		</dl>
+		<input type="button" onclick="return number()" value="実行" />
+	</form>
+</body>
+</html>

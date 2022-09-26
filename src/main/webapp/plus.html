@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sum</title>
+<script type="text/javascript">
+	function sum(){
+		var num1 = parseInt(document.fm.val1.value);
+		var num2 = parseInt(document.fm.val2.value);
+		var summary = num1 + num2;
+		alert(summary);
+}
+</script>
+</head>
+<body>
+	<form name="fm">
+    <input type="text" name="val1"/>
+    +
+    <input type="text" name="val2"/>
+    <input type="submit" value="実行" onclick="sum()"/>
+</form>
+</body>
+</html>

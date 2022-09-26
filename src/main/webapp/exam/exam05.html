@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>exam05</title>
+<script type="text/javascript">
+	function subtract(){
+		var num1 = parseInt(document.fm.val1.value);
+		var num2 = parseInt(document.fm.val2.value);
+		var sub = num1 - num2;
+		alert(sub);
+	}
+	function linking(){
+		var num1 = document.fm.val1.value;
+		var num2 = document.fm.val2.value;
+		var link = num1 + num2;
+		alert(link);
+	}
+</script>
+</head>
+<body>
+	<form name="fm">
+    <input type="text" name="val1"/>
+    -
+    <input type="text" name="val2"/>
+    <input type="submit" value="減算" onclick="subtract()"/>
+    <input type="submit" value="連結" onclick="linking()"/>
+</form>
+</body>
+</html>

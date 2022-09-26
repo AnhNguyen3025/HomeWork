@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jump</title>
+	<script type="text/javascript">
+		function number(){
+			var num =  parseInt(document.fm.num.value);
+			if(siteName=="文部科学省"){
+				document.fm.action="http://www.mext.go.jp/";
+			}else if(siteName=="経済産業省"){
+				document.fm.action="http://www.meti.go.jp/";
+			}else{
+				alert("遷移出来ません");
+				return false;
+			}
+		}
+	
+	</script>
+	
+</head>
+<body>
+<form name="fm">
+    <dl>
+    	<dt>文字例</dt>
+    	<dd><input type="text" name="number"/></dd>
+    </dl>
+    <input type="submit" onclick="return jump()" value="実行" />
+</form>
+</body>
+</html>

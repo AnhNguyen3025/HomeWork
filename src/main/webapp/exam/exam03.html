@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hello</title>
+</head>
+<body>
+	<form name="fm">
+		<fieldset id="group1">
+    <input type="radio" name="myRadio" value="0" onclick="alert('ありがとうございます。')"/>いいね。
+    <input type="radio" name="myRadio" value="1" onclick="alert('残念です。')" />だめね。
+    	</fieldset>
+    <select name="anhId">
+                <option value="A" onchange="alert(document.fm.anhId.value)">A</option>
+                <option value="B" onchange="alert(document.fm.anhId.value)">B</option>
+                <option value="C" onchange="alert(document.fm.anhId.value)">C</option>
+    </select>
+</form>
+</body>
+</html>
