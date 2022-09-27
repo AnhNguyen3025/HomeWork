@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+	var objects = {};
+	function pushObject() {
+		var obj = {};
+		obj.memberId = document.fm.memberId.value;
+		obj.memberName = document.fm.memberName.value;
+		obj.password = document.fm.password.value;
+		objects[obj.memberId] = obj;
+		document.fm.memberId.value = "";
+		document.fm.memberName.value = "";
+		document.fm.password.value = "";
+	}
+	function search() {
+		var obj = objects[document.searchForm.memberId.value];
+		if (obj == null) {
+			alert("存在しません");
+		} else {
+			alert("会員名 :"+ obj.memberName + "\n"+
+					"パスワード :"+ obj.password);
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="fm">
+		<dl>
+			<dt>ID</dt>
+			<dd>
+				<input type="text" name="memberId">
+			</dd>
+			<dt>名前</dt>
+			<dd>
+				<input type="text" name="memberName">
+			</dd>
+			<dt>パスワード</dt>
+			<dd>
+				<input type="text" name="password">
+			</dd>
+		</dl>
+		<input type="button" value="登録" onclick="pushObject()">
+	</form>
+	
+	<form name="searchForm">
+		<input type="text" name="memberId"> 
+		<input type="button" value="検索" onclick="search()">
+	</form>
+</body>
+</html>

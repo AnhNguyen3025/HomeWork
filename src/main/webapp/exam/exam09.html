@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+	var erroMes = [];
+	function memberCheck() {
+		var memId = document.fm.memberId.value;
+		var memName = document.fm.memberName.value;
+		var memPw = document.fm.password.value;
+		
+		if(memId == ""){
+			erroMes.push("会員IDを入力してください。");
+		}
+		if(memName == ""){
+			erroMes.push("会員名を入力してください。");
+		}
+		if(memPw == ""){
+			erroMes.push("パスワードを入力してください。");
+		}
+		var str = "";
+		for(var i = 0; i<erroMes.length;i++){ 
+			if(erroMes.length>0){
+				str += erroMes[i]+ "\n";
+			}else{
+				str = "問題ありません。";
+			}
+		}
+		alert(str);
+	}
+</script>
+</head>
+<body>
+	<form name="fm">
+		<dl>
+			<dt>ID</dt>
+			<dd>
+				<input type="text" name="memberId">
+			</dd>
+			<dt>名前</dt>
+			<dd>
+				<input type="text" name="memberName">
+			</dd>
+			<dt>パスワード</dt>
+			<dd>
+				<input type="text" name="password">
+			</dd>
+		</dl>
+	</form>
+	<p>
+		<input type="button" value="登録" onclick="memberCheck()">
+	</p>
+</body>
+</html>
