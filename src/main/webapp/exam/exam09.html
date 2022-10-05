@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
 	var erroMes = [];
+	erroMes.push("問題ありません。")
+	
 	function memberCheck() {
 		var memId = document.fm.memberId.value;
 		var memName = document.fm.memberName.value;
@@ -20,13 +22,15 @@
 		}
 		var str = "";
 		for(var i = 0; i<erroMes.length;i++){ 
-			if(erroMes.length>0){
 				str += erroMes[i]+ "\n";
-			}else{
-				str = "問題ありません。";
-			}
 		}
-		alert(str);
+	
+		if(erroMes.length>1){
+			alert(str.replace("問題ありません。",""));
+		}else{
+			alert(str);
+		}
+		
 	}
 </script>
 </head>
